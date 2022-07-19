@@ -1,0 +1,38 @@
+.content {
+  position: relative;
+}
+
+.badge {
+  animation-name: showBadge;
+  animation-duration: 0.3s;
+  margin-right: 10px;
+}
+
+.badgeHide {
+  animation-name: showBadge;
+  animation-duration: 0.3s;
+  animation-direction: reverse;
+  width: 0;
+}
+
+.btn {
+  min-width: 165px;
+}
+
+.fadeIn {
+  transition: all 0.1s ease-in-out;
+}
+
+.description {
+  min-height: 8rem;
+}
+
+@keyframes showBadge {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 69.23px;
+  }
+}

@@ -1,11 +1,13 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Container from 'react-bootstrap/Container';
 import fetchRockets from '../../redux/rockets/RocketsService';
-// import { reserveRocket } from '../../redux/rockets/rockets';
+import { reserveRocket } from '../../redux/rockets/rockets';
 import Rocket from './Rocket';
 
 const Rockets = () => {
   const dispatch = useDispatch();
+  // console.log(useSelector((state) => state));
   const [{ loaded }, ...rockets] = useSelector((state) => state.rockets);
 
   useEffect(() => {
@@ -15,11 +17,10 @@ const Rockets = () => {
   }, []);
 
   const reserve = (id) => {
-    console.log(id);
-    // dispatch(reserveRocket(id));
+    dispatch(reserveRocket(id));
   };
   return (
-    <div>
+    <Container fluid>
       {rockets.map((rocket) => (
         <Rocket
           key={rocket.id}
@@ -27,10 +28,11 @@ const Rockets = () => {
           image={rocket.flickr_images[0]}
           name={rocket.name}
           desc={rocket.description}
+          reserved={rocket.reserved}
           handleClick={reserve}
         />
       ))}
-    </div>
+    </Container>
   );
 };
 
