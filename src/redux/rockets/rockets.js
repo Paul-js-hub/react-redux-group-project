@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import fetchRockets from './RocketsService';
-
+/* eslint-disable no-param-reassign */
 const initialState = [
   {
   },
