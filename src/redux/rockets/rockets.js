@@ -11,16 +11,21 @@ const rocketsSlice = createSlice({
   initialState,
   reducers: {
     reserveRocket: (state, action) => {
-      console.log(state);
+      console.log(state.rockets);
+      state.map((el) => {
+        console.log(el);
+        return 1;
+      });
+      // console.log(state);
       console.log(action);
     },
   },
   extraReducers: {
-    [fetchRockets.fulfilled]: (state, payload) => {
+    [fetchRockets.fulfilled]: (state, action) => {
       const loaded = [{
         loaded: true,
       }];
-      const rocketsObj = Object.entries(payload.payload).map((el) => {
+      const rocketsObj = Object.entries(action.payload).map((el) => {
         const r = el[1];
         const obj = {
           id: r.id,
@@ -38,4 +43,5 @@ const rocketsSlice = createSlice({
   },
 });
 
+export const { reserveRocket } = rocketsSlice.actions;
 export default rocketsSlice.reducer;
