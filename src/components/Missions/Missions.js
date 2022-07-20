@@ -6,10 +6,13 @@ import { getMissions } from '../../redux/missions/missions';
 
 const Missions = () => {
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getMissions());
-  }, []);
   const result = useSelector((state) => state.missions);
+  const { pending } = result;
+  useEffect(() => {
+    if (pending) {
+      dispatch(getMissions());
+    }
+  }, []);
   return (
     <Table striped bordered hover size="sm">
       <thead>
@@ -23,8 +26,10 @@ const Missions = () => {
       {result.missions.map((mission) => (
         <Mission
           key={mission.mission_id}
-          name={mission.mission_name}
+          id={mission.mission_id}
+          name={mission.name}
           description={mission.description}
+          reserved={mission.reserved}
         />
       ))}
     </Table>
