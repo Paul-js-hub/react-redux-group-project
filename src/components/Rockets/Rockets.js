@@ -7,9 +7,7 @@ import Rocket from './Rocket';
 
 const Rockets = () => {
   const dispatch = useDispatch();
-  // console.log(useSelector((state) => state));
-  const [{ loaded }, ...rockets] = useSelector((state) => state.rockets);
-
+  const { loaded, data } = useSelector((state) => state.rockets);
   useEffect(() => {
     if (!loaded) {
       dispatch(fetchRockets());
@@ -21,7 +19,7 @@ const Rockets = () => {
   };
   return (
     <Container fluid>
-      {rockets.map((rocket) => (
+      {data.map((rocket) => (
         <Rocket
           key={rocket.id}
           id={rocket.id}
