@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Rockets from './Rockets/Rockets';
 import Missions from './Missions';
-import { getReserved } from '../../redux/rockets/rockets';
+import { getReserved as getReservedRockets } from '../../redux/rockets/rockets';
 import fetchRockets from '../../redux/rockets/RocketsService';
 
 const Profile = () => {
@@ -16,7 +16,7 @@ const Profile = () => {
     if (!loaded) {
       dispatch(fetchRockets());
     }
-    dispatch(getReserved());
+    dispatch(getReservedRockets());
   }, []);
 
   return (
