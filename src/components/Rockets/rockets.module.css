@@ -2,18 +2,24 @@
   position: relative;
 }
 
-.badge {
-  animation-name: showBadge;
-  animation-duration: 0.3s;
-  margin-right: 10px;
+.description .badge {
+  /* animation-name: showBadge;
+  animation-duration: 0.3s; */
+  transition: all 0.5s ease-in-out;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
 }
 
-.badgeHide {
-  animation-name: showBadge;
-  animation-duration: 0.3s;
-  animation-direction: reverse;
-  width: 0;
+.description .badge.badgeShow {
+  width: 69.23px;
+  opacity: 1;
+  margin-right: 10px;
+  visibility: visible;
+  padding: .35em .65em;
 }
+
 
 .btn {
   min-width: 165px;

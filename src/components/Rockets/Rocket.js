@@ -10,6 +10,11 @@ const Rocket = (props) => {
     id, image, name, desc, handleClick, reserved,
   } = props;
 
+  const badgeStyle = (reserved) => {
+    if (reserved) return `${style.badgeShow} ${style.badge}`;
+    return style.badge;
+  };
+
   return (
     <Row className="align-items-center my-5">
       <Col xl={3} md={5}>
@@ -21,11 +26,11 @@ const Rocket = (props) => {
         <div className={style.content}>
           <h2>{name}</h2>
           <p className={style.description}>
-            {reserved && (<Badge className={style.badge} bg="success">Reserved</Badge>)}
+            {/* {reserved && (<Badge className={style.badge} bg="success">Reserved</Badge>)} */}
+            <Badge className={badgeStyle(reserved)} bg="success">Reserved</Badge>
             {desc}
           </p>
         </div>
-        {/* {reserveBtn(reserved)} */}
         <Button
           type="button"
           onClick={() => handleClick(id)}
@@ -35,7 +40,6 @@ const Rocket = (props) => {
           {reserved ? ('Cancel Reservation') : ('Reserve Rocket')}
         </Button>
       </Col>
-      {/* {reserved ? ('hello')} */}
     </Row>
   );
 };
