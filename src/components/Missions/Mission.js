@@ -10,9 +10,7 @@ const Mission = ({
 }) => {
   const dispatch = useDispatch();
   const updateMission = () => {
-    console.log('ID', id);
-    console.log('Reserved', reserved);
-    dispatch(joinMission({ id }));
+    dispatch(joinMission(id));
   };
 
   const cancelMission = () => {
@@ -25,21 +23,21 @@ const Mission = ({
         <td>{name}</td>
         <td>{description}</td>
         <td><Badge bg="secondary">{reserved ? 'ACTIVE MEMBER' : 'NOT A MEMBER'}</Badge></td>
-        <td>{reserved ? <Button variant="secondary" onClick={() => cancelMission(id)}>Leave Mission</Button> : <Button variant="secondary" onClick={() => updateMission(id)}>Join Mission</Button>}</td>
+        <td>{reserved ? <Button variant="secondary" onClick={cancelMission}>Leave Mission</Button> : <Button variant="secondary" onClick={updateMission}>Join Mission</Button>}</td>
       </tr>
     </tbody>
   );
 };
 
 Mission.defaultProps = {
-  id: PropTypes.number,
+  id: PropTypes.string,
   name: PropTypes.string,
   description: PropTypes.string,
   reserved: PropTypes.bool,
 };
 
 Mission.propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.string,
   name: PropTypes.string,
   description: PropTypes.string,
   reserved: PropTypes.bool,
