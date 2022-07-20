@@ -22,8 +22,8 @@ const Mission = ({
         <td>1</td>
         <td>{name}</td>
         <td>{description}</td>
-        <td><Badge bg="secondary">{reserved ? 'ACTIVE MEMBER' : 'NOT A MEMBER'}</Badge></td>
-        <td>{reserved ? <Button variant="secondary" onClick={cancelMission}>Leave Mission</Button> : <Button variant="secondary" onClick={updateMission}>Join Mission</Button>}</td>
+        <td>{reserved ? <Badge bg="primary">Active Member</Badge> : <Badge bg="secondary">NOT A MEMBER</Badge>}</td>
+        <td>{reserved ? <Button variant="danger" onClick={cancelMission}>Leave Mission</Button> : <Button variant="secondary" onClick={updateMission}>Join Mission</Button>}</td>
       </tr>
     </tbody>
   );
