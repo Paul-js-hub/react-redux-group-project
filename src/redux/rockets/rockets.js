@@ -1,4 +1,4 @@
-import { createSlice, current } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import fetchRockets from './RocketsService';
 /* eslint-disable no-param-reassign */
 
@@ -24,8 +24,6 @@ const rocketsSlice = createSlice({
     getReserved: (state) => {
       const reserved = state.data.filter((rocket) => {
         if (rocket.reserved === true) {
-          console.log(current(rocket));
-
           return rocket;
         }
         return null;
