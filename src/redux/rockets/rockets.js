@@ -18,6 +18,7 @@ const rocketsSlice = createSlice({
         }
         return rocket;
       });
+      console.log(action);
     },
   },
   extraReducers: {

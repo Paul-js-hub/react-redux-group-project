@@ -8,7 +8,7 @@ const store = configureStore({
     rockets: rocketsReducer,
     missions: missionsReducer,
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware({ serializableCheck: false }).concat(logger),
 });
 
 export default store;
