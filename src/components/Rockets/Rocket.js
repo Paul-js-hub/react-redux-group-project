@@ -12,7 +12,7 @@ const Rocket = (props) => {
 
   return (
     <Row className="align-items-center my-5">
-      <Col md={5}>
+      <Col xl={3} md={5}>
         <div className="rocketImage">
           <img src={image} alt={name} width="100%" />
         </div>
