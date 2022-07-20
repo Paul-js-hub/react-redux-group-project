@@ -26,7 +26,6 @@ const Rocket = (props) => {
         <div className={style.content}>
           <h2>{name}</h2>
           <p className={style.description}>
-            {/* {reserved && (<Badge className={style.badge} bg="success">Reserved</Badge>)} */}
             <Badge className={badgeStyle(reserved)} bg="success">Reserved</Badge>
             {desc}
           </p>
