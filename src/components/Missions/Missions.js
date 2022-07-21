@@ -18,7 +18,6 @@ const Missions = () => {
     <Table striped bordered hover size="sm" className={styles.table}>
       <thead>
         <tr>
-          <th>#</th>
           <th>Mission</th>
           <th>Description</th>
           <th>Status</th>
