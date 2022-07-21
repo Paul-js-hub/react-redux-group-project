@@ -1,5 +1,4 @@
 .table {
-  /* width: 90% !important; */
   margin: 8px auto !important;
 }
 
@@ -7,6 +6,6 @@
   vertical-align: middle !important;
 }
 
-.btnbadge {
-  height: 25px;
+.btn {
+  width: 95px;
 }

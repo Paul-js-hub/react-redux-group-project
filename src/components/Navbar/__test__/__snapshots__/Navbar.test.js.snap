@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test of navbar test if the navbar is rendered 1`] = `
+<nav
+  className="navContainer navbar navbar-expand-lg navbar-light bg-white fixed-top"
+>
+  <div
+    className="container"
+  >
+    <div>
+      <a
+        className="me-auto navbar-brand"
+        href="/"
+      >
+        <img
+          alt=""
+          className="d-inline-block align-top"
+          height="30"
+          src="logo.png"
+          width="30"
+        />
+        <h3
+          className="d-inline"
+        >
+          SpaceX
+        </h3>
+      </a>
+    </div>
+    <button
+      aria-label="Toggle navigation"
+      className="navbar-toggler collapsed"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="navbar-toggler-icon"
+      />
+    </button>
+    <div
+      aria-expanded={null}
+      className="linkContainer navbar-collapse collapse"
+    >
+      <a
+        aria-current="page"
+        className="active"
+        href="#/"
+        onClick={[Function]}
+      >
+        Rockets
+      </a>
+      <a
+        className=""
+        href="#/missions"
+        onClick={[Function]}
+      >
+        Missions
+      </a>
+      <div
+        className="vr mx-3"
+      />
+      <a
+        className=""
+        href="#/profile"
+        onClick={[Function]}
+      >
+        My Profile
+      </a>
+    </div>
+  </div>
+</nav>
+`;
