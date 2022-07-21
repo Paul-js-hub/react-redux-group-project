@@ -1,13 +1,12 @@
 /* eslint-disable import/no-named-default */
 import { NavLink } from 'react-router-dom';
 import { default as BootstrapNavbar } from 'react-bootstrap/Navbar';
-// import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import logo from '../../img/logo.png';
 import style from './navbar.module.css';
 
 const Navbar = () => (
-  <BootstrapNavbar bg="white" variant="light" className={style.navContainer} expand="lg">
+  <BootstrapNavbar fixed="top" bg="white" variant="light" className={style.navContainer} expand="lg">
     <Container fluid>
       <BootstrapNavbar.Brand href="#home" className="me-auto">
         <img
