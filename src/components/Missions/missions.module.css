@@ -1,0 +1,12 @@
+.table {
+  width: 90% !important;
+  margin: 8px auto !important;
+}
+
+.reserved {
+  vertical-align: middle !important;
+}
+
+.btnbadge {
+  height: 25px;
+}

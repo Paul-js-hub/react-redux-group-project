@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 import Mission from './Mission';
 import { getMissions } from '../../redux/missions/missions';
+import styles from './missions.module.css';
 
 const Missions = () => {
   const dispatch = useDispatch();
@@ -14,10 +15,9 @@ const Missions = () => {
     }
   }, []);
   return (
-    <Table striped bordered hover size="sm">
+    <Table striped bordered hover size="sm" className={styles.table}>
       <thead>
         <tr>
-          <th>#</th>
           <th>Mission</th>
           <th>Description</th>
           <th>Status</th>

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Badge';
 import { joinMission, leaveMission } from '../../redux/missions/missions';
+import styles from './missions.module.css';
 
 const Mission = ({
   name, description, id, reserved,
@@ -19,11 +19,10 @@ const Mission = ({
   return (
     <tbody key={id}>
       <tr>
-        <td>1</td>
         <td>{name}</td>
         <td>{description}</td>
-        <td>{reserved ? <Badge bg="primary">Active Member</Badge> : <Badge bg="secondary">NOT A MEMBER</Badge>}</td>
-        <td>{reserved ? <Button variant="danger" onClick={cancelMission}>Leave Mission</Button> : <Button variant="secondary" onClick={updateMission}>Join Mission</Button>}</td>
+        <td className={styles.reserved}>{reserved ? <Badge bg="primary">Active Member</Badge> : <Badge bg="secondary">NOT A MEMBER</Badge>}</td>
+        <td className={styles.reserved}>{reserved ? <Badge className={styles.btnbadge} bg="danger" type="button" onClick={cancelMission}>Leave Mission</Badge> : <Badge className={styles.btnbadge} bg="secondary" type="button" onClick={updateMission}>Join Mission</Badge>}</td>
       </tr>
     </tbody>
   );
