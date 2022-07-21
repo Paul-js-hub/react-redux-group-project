@@ -6,7 +6,7 @@ const Rockets = (props) => {
 
   return (
     <Card body>
-      <h4>{name}</h4>
+      {name}
     </Card>
   );
 };
