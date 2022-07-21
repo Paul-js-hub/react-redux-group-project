@@ -1,0 +1,23 @@
+.navContainer {
+  border-bottom: 1px solid #ccc;
+}
+
+.navContainer a {
+  text-decoration: none;
+  margin-right: 1rem;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.navContainer a.active {
+  text-decoration: underline;
+}
+
+.navContainer img {
+  margin-right: 10px;
+}
+
+.linkContainer {
+  max-width: 300px;
+}
