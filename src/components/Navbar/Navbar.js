@@ -23,6 +23,7 @@ const Navbar = () => (
       <BootstrapNavbar.Collapse className={style.linkContainer}>
         <NavLink className={({ isActive }) => (isActive ? style.active : '')} to="/">Rockets</NavLink>
         <NavLink className={({ isActive }) => (isActive ? style.active : '')} to="/missions">Missions</NavLink>
+        <div className="vr mx-3" />
         <NavLink className={({ isActive }) => (isActive ? style.active : '')} to="/profile">My Profile</NavLink>
       </BootstrapNavbar.Collapse>
     </Container>
