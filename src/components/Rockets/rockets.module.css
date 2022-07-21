@@ -1,0 +1,43 @@
+.content {
+  position: relative;
+}
+
+.description .badge {
+  /* animation-name: showBadge;
+  animation-duration: 0.3s; */
+  transition: all 0.5s ease-in-out;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.description .badge.badgeShow {
+  width: 69.23px;
+  opacity: 1;
+  margin-right: 10px;
+  visibility: visible;
+  padding: 0.35em 0.65em;
+}
+
+.btn {
+  min-width: 165px;
+}
+
+.fadeIn {
+  transition: all 0.1s ease-in-out;
+}
+
+.description {
+  min-height: 8rem;
+}
+
+@keyframes showBadge {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 69.23px;
+  }
+}
