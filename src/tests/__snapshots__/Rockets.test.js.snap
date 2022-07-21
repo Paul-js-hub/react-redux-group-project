@@ -2,6 +2,6 @@
 
 exports[`Rockets test Rockets render correctly 1`] = `
 <div
-  className="container-fluid"
+  className="container"
 />
 `;
