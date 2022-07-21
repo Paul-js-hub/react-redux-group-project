@@ -1,10 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 import fetchRockets from './RocketsService';
 /* eslint-disable no-param-reassign */
-const initialState = [
-  {
-  },
-];
+
+const initialState = {
+  loaded: false,
+  data: [],
+  reserved: [],
+};
 
 const rocketsSlice = createSlice({
   name: 'rockets',
@@ -12,20 +14,25 @@ const rocketsSlice = createSlice({
   reducers: {
     reserveRocket: (state, action) => {
       const { payload: rocketId } = action;
-      state.map((rocket) => {
+      state.data.map((rocket) => {
         if (rocket.id === rocketId) {
           rocket.reserved = !rocket.reserved;
         }
         return rocket;
       });
-      console.log(action);
+    },
+    getReserved: (state) => {
+      const reserved = state.data.filter((rocket) => {
+        if (rocket.reserved === true) {
+          return rocket;
+        }
+        return null;
+      });
+      return { ...state, reserved: [...reserved] };
     },
   },
   extraReducers: {
     [fetchRockets.fulfilled]: (state, action) => {
-      const loaded = [{
-        loaded: true,
-      }];
       const rocketsObj = Object.entries(action.payload).map((el) => {
         const r = el[1];
         const obj = {
@@ -38,11 +45,10 @@ const rocketsSlice = createSlice({
 
         return obj;
       });
-
-      return [...loaded, ...rocketsObj];
+      return { ...state, data: rocketsObj, loaded: true };
     },
   },
 });
 
-export const { reserveRocket } = rocketsSlice.actions;
+export const { reserveRocket, getReserved } = rocketsSlice.actions;
 export default rocketsSlice.reducer;
