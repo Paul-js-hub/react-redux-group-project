@@ -1,8 +1,8 @@
 import renderer from 'react-test-renderer';
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import store from '../../../redux/configureStore';
-import Rocket from '../Rockets';
+import store from '../redux/configureStore';
+import Rocket from '../components/Rockets/Rockets';
 
 describe('One rocket test', () => {
   it('Rocket render correctly', () => {
