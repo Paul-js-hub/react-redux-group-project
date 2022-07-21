@@ -9,7 +9,7 @@ describe('Rockets test', () => {
     const RocketsPage = renderer.create(
       <Provider store={store}>
         <Rockets />
-      </Provider>
+      </Provider>,
     ).toJSON();
     expect(RocketsPage).toMatchSnapshot();
   });
@@ -18,7 +18,7 @@ describe('Rockets test', () => {
     render(
       <Provider store={store}>
         <Rockets />
-      </Provider>
+      </Provider>,
     );
   });
 });
