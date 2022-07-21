@@ -20,7 +20,7 @@ const Profile = () => {
   }, []);
 
   return (
-    <Container fluid>
+    <Container>
       <Row>
         <Col>
           <h3>My Missions</h3>

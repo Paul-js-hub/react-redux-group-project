@@ -18,7 +18,7 @@ const Rockets = () => {
     dispatch(reserveRocket(id));
   };
   return (
-    <Container fluid>
+    <Container>
       {data.map((rocket) => (
         <Rocket
           key={rocket.id}

@@ -5,7 +5,6 @@
 
 .navContainer a {
   text-decoration: none;
-  display: block;
 }
 
 .navContainer a:nth-child(1) {
