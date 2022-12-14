@@ -32,7 +32,7 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Live link
-[Live Demo Link](https://spacex-travellers.herokuapp.com/missions)
+[Live Demo Link](https://6399e6cd2fbcf003620ebd93--beamish-faloodeh-c1b8d5.netlify.app/)
 
 ## Authors
 
